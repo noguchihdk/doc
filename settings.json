@@ -1,0 +1,7 @@
+{
+  "ProxyIsEnabled": true,
+  "Proxy": "10.137.253.31:3128",
+  "ProxyBypass": "10.102.21.*;192.168.0.*;localhost;127.0.0.1",
+  "AutoConfigIsEnabled": false,
+  "AutoDetect": true
+}
