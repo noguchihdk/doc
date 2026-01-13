@@ -1,0 +1,22 @@
+■プロキシ設定
+netsh winhttp set advproxy setting-scope=machine settings-file=settings.json
+
+■確認
+netsh winhttp set advproxy
+
+■もとに戻す (User)
+netsh winhttp set advproxy setting-scope=user settings="{\"Proxy\":\"\",\"ProxyBypass\":\"\",\"AutoconfigUrl\":\"\",\"AutoDetect\":true}"
+
+■もとに戻す (machine)
+netsh winhttp set advproxy setting-scope=machine settings="{\"Proxy\":\"\",\"ProxyBypass\":\"\",\"AutoconfigUrl\":\"\",\"AutoDetect\":true}"
+
+<settings.json>
+====
+{
+  "ProxyIsEnabled": true,
+  "Proxy": "10.137.253.31:3128",
+  "ProxyBypass": "10.102.21.*;192.168.0.*;localhost;127.0.0.1",
+  "AutoConfigIsEnabled": false,
+  "AutoDetect": true
+}
+====
